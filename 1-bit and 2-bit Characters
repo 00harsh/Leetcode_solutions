@@ -1,0 +1,20 @@
+class Solution {
+    public boolean isOneBitCharacter(int[] bits) {
+        
+      if(bits.length == 0 || bits == null){
+          return false;
+      }
+        int idx = bits.length - 1;
+        int count = 0;
+        while(idx > 0){
+            idx--;
+            if(bits[idx] == 1){
+                count++;
+            }else{
+                break;
+            }
+        }
+        return count%2 == 0;
+        
+}
+}
